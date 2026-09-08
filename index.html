@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#4338ca" />
+
+    <title>Time Duration Calculator — add and subtract hours and minutes</title>
+    <meta
+      name="description"
+      content="Add and subtract lengths of time like 1h 30m, 2:15 or 90 min, or find how long it is between two clock times. Results in h:mm:ss and as total hours, minutes, seconds and days. Free, in your browser."
+    />
+    <link rel="canonical" href="https://time-duration-calculator.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Time Duration Calculator" />
+    <meta property="og:description" content="Add and subtract durations, or find the time between two clock times. Results in h:mm:ss and total hours/minutes/seconds/days. Client-side." />
+    <meta property="og:url" content="https://time-duration-calculator.correia95.workers.dev/" />
+    <meta property="og:image" content="https://time-duration-calculator.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Time Duration Calculator" />
+    <meta name="twitter:description" content="Add and subtract durations, or find the time between two clock times. Results in h:mm:ss and total hours/minutes/seconds/days. Client-side." />
+    <meta name="twitter:image" content="https://time-duration-calculator.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Time Duration Calculator",
+        "url": "https://time-duration-calculator.correia95.workers.dev/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Add and subtract time durations entered as h:mm, 1h 30m, 90m or decimal hours, and calculate the elapsed time between two clock times, with results in h:mm:ss and total hours, minutes, seconds and days, entirely in the browser."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I add two durations like 1h 30m and 45m?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Type each one on its own row and leave the sign on plus. 1h 30m plus 45m gives 2h 15m. Switch a row to minus to subtract it instead."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What time formats are accepted?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For durations: 1:30 or 1:30:00, 1h 30m, 90m, 1.5h, 2d 4h, or a plain number meaning minutes. For clock times: 24-hour like 14:30, or 2:30 pm."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does it handle shifts that run past midnight?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In the between-two-times mode, if the end time is earlier than the start it is treated as the next day, so 22:00 to 06:00 is 8 hours. A checkbox forces a next-day end when the two times are equal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my data sent anywhere?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The calculation runs in your browser. Only the selected mode is stored, in the page link. It works offline once loaded."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">
+        This time duration calculator needs JavaScript. It adds and subtracts durations and finds the
+        time between two clock times.
+      </p>
+    </noscript>
+  </body>
+</html>

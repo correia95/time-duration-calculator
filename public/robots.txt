@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://time-duration-calculator.correia95.workers.dev/sitemap.xml
