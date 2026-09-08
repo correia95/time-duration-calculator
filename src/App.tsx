@@ -22,7 +22,7 @@ function readMode(): Mode {
   }
 }
 
-const fmt1 = (n: number) => (Math.round(n * 100) / 100).toLocaleString('en-US');
+const fmt1 = (n: number) => (Math.round(n * 100) / 100).toLocaleString(undefined);
 
 export default function App() {
   const [mode, setMode] = useState<Mode>(readMode);
@@ -177,7 +177,7 @@ export default function App() {
               </div>
               <div>
                 <dt>Seconds</dt>
-                <dd>{bd.seconds.toLocaleString('en-US')}</dd>
+                <dd>{bd.seconds.toLocaleString(undefined)}</dd>
               </div>
               <div>
                 <dt>Days</dt>
